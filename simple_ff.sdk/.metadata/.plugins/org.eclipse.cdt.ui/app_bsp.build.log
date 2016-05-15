@@ -1,0 +1,86 @@
+13:54:26 **** Auto Build of project app_bsp ****
+make -k all 
+"Running Make include in hier_mb_ps_microblaze_0/libsrc/axidma_v9_0/src"
+make -C hier_mb_ps_microblaze_0/libsrc/axidma_v9_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in hier_mb_ps_microblaze_0/libsrc/bram_v4_0/src"
+make -C hier_mb_ps_microblaze_0/libsrc/bram_v4_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in hier_mb_ps_microblaze_0/libsrc/cpu_v2_3/src"
+make -C hier_mb_ps_microblaze_0/libsrc/cpu_v2_3/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in hier_mb_ps_microblaze_0/libsrc/intc_v3_4/src"
+make -C hier_mb_ps_microblaze_0/libsrc/intc_v3_4/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in hier_mb_ps_microblaze_0/libsrc/spi_v4_1/src"
+make -C hier_mb_ps_microblaze_0/libsrc/spi_v4_1/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in hier_mb_ps_microblaze_0/libsrc/standalone_v5_2/src"
+make -C hier_mb_ps_microblaze_0/libsrc/standalone_v5_2/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in hier_mb_ps_microblaze_0/libsrc/tmrctr_v3_0/src"
+make -C hier_mb_ps_microblaze_0/libsrc/tmrctr_v3_0/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make include in hier_mb_ps_microblaze_0/libsrc/uartlite_v3_1/src"
+make -C hier_mb_ps_microblaze_0/libsrc/uartlite_v3_1/src -s include  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift" "EXTRA_COMPILER_FLAGS=-g"
+"Running Make libs in hier_mb_ps_microblaze_0/libsrc/axidma_v9_0/src"
+make -C hier_mb_ps_microblaze_0/libsrc/axidma_v9_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling axidma"
+In file included from xaxidma.h:470:0,
+                 from xaxidma.c:83:
+xaxidma.c: In function 'XAxiDma_Reset':
+xaxidma_bdring.h:238:26: warning: assignment makes pointer from integer without a cast
+    (RingPtr)->BdaRestart =      \
+                          ^
+xaxidma.c:313:3: note: in expansion of macro 'XAxiDma_BdRingSnapShotCurrBd'
+   XAxiDma_BdRingSnapShotCurrBd(TxRingPtr);
+   ^
+xaxidma_bdring.h:243:27: warning: assignment makes pointer from integer without a cast
+     (RingPtr)->BdaRestart =     \
+                           ^
+xaxidma.c:313:3: note: in expansion of macro 'XAxiDma_BdRingSnapShotCurrBd'
+   XAxiDma_BdRingSnapShotCurrBd(TxRingPtr);
+   ^
+xaxidma_bdring.h:248:27: warning: assignment makes pointer from integer without a cast
+     (RingPtr)->BdaRestart =     \
+                           ^
+xaxidma.c:313:3: note: in expansion of macro 'XAxiDma_BdRingSnapShotCurrBd'
+   XAxiDma_BdRingSnapShotCurrBd(TxRingPtr);
+   ^
+xaxidma_bdring.h:238:26: warning: assignment makes pointer from integer without a cast
+    (RingPtr)->BdaRestart =      \
+                          ^
+xaxidma.c:319:4: note: in expansion of macro 'XAxiDma_BdRingSnapShotCurrBd'
+    XAxiDma_BdRingSnapShotCurrBd(RxRingPtr);
+    ^
+xaxidma_bdring.h:243:27: warning: assignment makes pointer from integer without a cast
+     (RingPtr)->BdaRestart =     \
+                           ^
+xaxidma.c:319:4: note: in expansion of macro 'XAxiDma_BdRingSnapShotCurrBd'
+    XAxiDma_BdRingSnapShotCurrBd(RxRingPtr);
+    ^
+xaxidma_bdring.h:248:27: warning: assignment makes pointer from integer without a cast
+     (RingPtr)->BdaRestart =     \
+                           ^
+xaxidma.c:319:4: note: in expansion of macro 'XAxiDma_BdRingSnapShotCurrBd'
+    XAxiDma_BdRingSnapShotCurrBd(RxRingPtr);
+    ^
+mb-ar: creating ../../../lib/libxil.a
+"Running Make libs in hier_mb_ps_microblaze_0/libsrc/bram_v4_0/src"
+make -C hier_mb_ps_microblaze_0/libsrc/bram_v4_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling bram"
+"Running Make libs in hier_mb_ps_microblaze_0/libsrc/cpu_v2_3/src"
+make -C hier_mb_ps_microblaze_0/libsrc/cpu_v2_3/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling cpu"
+"Running Make libs in hier_mb_ps_microblaze_0/libsrc/intc_v3_4/src"
+make -C hier_mb_ps_microblaze_0/libsrc/intc_v3_4/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling intc"
+"Running Make libs in hier_mb_ps_microblaze_0/libsrc/spi_v4_1/src"
+make -C hier_mb_ps_microblaze_0/libsrc/spi_v4_1/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling spi"
+"Running Make libs in hier_mb_ps_microblaze_0/libsrc/standalone_v5_2/src"
+make -C hier_mb_ps_microblaze_0/libsrc/standalone_v5_2/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling standalone";
+"Running Make libs in hier_mb_ps_microblaze_0/libsrc/tmrctr_v3_0/src"
+make -C hier_mb_ps_microblaze_0/libsrc/tmrctr_v3_0/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling tmrctr"
+"Running Make libs in hier_mb_ps_microblaze_0/libsrc/uartlite_v3_1/src"
+make -C hier_mb_ps_microblaze_0/libsrc/uartlite_v3_1/src -s libs  "SHELL=CMD" "COMPILER=mb-gcc" "ARCHIVER=mb-ar" "COMPILER_FLAGS= -O2 -c -mcpu=v9.5 -mlittle-endian -mno-xl-soft-div -mno-xl-soft-mul -mxl-barrel-shift" "EXTRA_COMPILER_FLAGS=-g"
+"Compiling uartlite"
+'Finished building libraries'
+
+13:54:37 Build Finished (took 11s.672ms)
+

@@ -1,0 +1,222 @@
+/*
+ * main.c
+ *
+ *  Created on: May 12, 2016
+ *      Author: Andrew Powell
+ */
+
+#include "xparameters.h"
+#include "xintc.h"
+#include "xil_exception.h"
+#include "xil_assert.h"
+#include "xaxidma.h"
+#include "xspi.h"
+#include "xil_assert.h"
+#include "xtmrctr.h"
+
+
+#define BRAM_BASE_ADDR							0xC0000000
+#define SAMPLE_RATE								44100
+#define SAMPLE_BUFFER_SIZE						512
+#define SAMPLE_BUFFER_0_BASE_ADDR				BRAM_BASE_ADDR
+#define SAMPLE_BUFFER_1_BASE_ADDR				(SAMPLE_BUFFER_0_BASE_ADDR+SAMPLE_BUFFER_SIZE*sizeof(u16))
+#define PL_FREQ									XPAR_MICROBLAZE_CORE_CLOCK_FREQ_HZ
+#define INTC_DEVICE_ID							XPAR_INTC_0_DEVICE_ID
+#define TIMER_DEVICE_ID							XPAR_AXI_TIMER_0_DEVICE_ID
+#define TIMER_INT_ID							XPAR_INTC_0_TMRCTR_0_VEC_ID
+#define TIMER_RESET_VALUE						PL_FREQ/SAMPLE_RATE
+#define SPI_DEVICE_ID							XPAR_AXI_QUAD_SPI_0_DEVICE_ID
+#define SPI_INT_ID								XPAR_INTC_0_SPI_0_VEC_ID
+#define DMA_DEVICE_ID							XPAR_AXIDMA_0_DEVICE_ID
+#define DMA_TX_INT_ID							XPAR_INTC_0_AXIDMA_0_VEC_ID
+
+typedef struct sample_buffer_type {
+	u16 samples[SAMPLE_BUFFER_SIZE];
+} sample_buffer_type;
+
+static XIntc intc_obj;
+static XTmrCtr timer_obj;
+static XSpi spi_obj;
+static XAxiDma dma_obj;
+
+static sample_buffer_type* current_buffer = (sample_buffer_type*)SAMPLE_BUFFER_0_BASE_ADDR;
+static u16 input_sample;
+static size_t sample_total = 0;
+
+static void dma_tx_handler(void* ptr);
+static void timer_handler(void *CallBackRef, u8 TmrCtrNumber);
+static void spi_handler(void *CallBackRef, u32 StatusEvent, unsigned int ByteCount);
+
+int main() {
+
+	// Initialize drivers.
+	{
+		int Status;
+
+		// Initialize interrupt controller.
+		{
+			Status = XIntc_Initialize(&intc_obj,INTC_DEVICE_ID);
+			Xil_AssertNonvoid(Status==XST_SUCCESS);
+			Status = XIntc_SelfTest(&intc_obj);
+			Xil_AssertNonvoid(Status==XST_SUCCESS);
+		}
+
+		// Initialize timer.
+		{
+			// Configure the driver's object.
+			Status =  XTmrCtr_Initialize(&timer_obj,TIMER_DEVICE_ID);
+			Xil_AssertNonvoid(Status==XST_SUCCESS);
+
+			// Configure timer to use interrupts, have a reset value, and reload each
+			// time the timer expires.
+			XTmrCtr_SetOptions(&timer_obj,0,
+					XTC_INT_MODE_OPTION|XTC_DOWN_COUNT_OPTION|XTC_AUTO_RELOAD_OPTION);
+			XTmrCtr_SetResetValue(&timer_obj,0,TIMER_RESET_VALUE);
+
+			// Associate user defined handler with timer's isr.
+			XTmrCtr_SetHandler(&timer_obj,timer_handler,NULL);
+
+			// Associate timer's isr with interrupt.
+			Status = XIntc_Connect(&intc_obj,TIMER_INT_ID,
+						   (XInterruptHandler)XTmrCtr_InterruptHandler,
+						   &timer_obj);
+			Xil_AssertNonvoid(Status==XST_SUCCESS);
+			XIntc_Enable(&intc_obj,TIMER_INT_ID);
+		}
+
+		// Initialize spi.
+		{
+			// Configure the driver's object.
+			XSpi_Config *ConfigPtr;
+			ConfigPtr = XSpi_LookupConfig(SPI_DEVICE_ID);
+			Xil_AssertNonvoid(ConfigPtr!=NULL);
+			Status = XSpi_CfgInitialize(&spi_obj,ConfigPtr,
+					ConfigPtr->BaseAddress);
+			Xil_AssertNonvoid(Status==XST_SUCCESS);
+			Status = XSpi_SelfTest(&spi_obj);
+			Xil_AssertNonvoid(Status==XST_SUCCESS);
+
+			// Configure the spi controller as a master that requires manual selection of its slave select and accepts
+			// bits after the first clock cycle of its serial clock. Consult the driver's header for more
+			// information.
+			Status = XSpi_SetOptions(&spi_obj,XSP_MASTER_OPTION|XSP_CLK_PHASE_1_OPTION|XSP_MANUAL_SSELECT_OPTION);
+			Xil_AssertNonvoid(Status==XST_SUCCESS);
+
+			// Associate user-defined handler with spi's isr, and then associate spi's isr with interrupt.
+			XSpi_SetStatusHandler(&spi_obj,NULL,(XSpi_StatusHandler)spi_handler);
+			Status = XIntc_Connect(&intc_obj,SPI_INT_ID,(XInterruptHandler)XSpi_InterruptHandler,
+					&spi_obj);
+			XIntc_Enable(&intc_obj,SPI_INT_ID);
+		}
+
+		// Initialize dma and respective interrupt.
+		{
+			// Configure the driver's object.
+			XAxiDma_Config *Config;
+			Config = XAxiDma_LookupConfig(DMA_DEVICE_ID);
+			Xil_AssertVoid(Config!=NULL);
+			Status = XAxiDma_CfgInitialize(&dma_obj, Config);
+			Xil_AssertVoid(Status==XST_SUCCESS);
+
+			// Associate interrupt with isr.
+			Status = XIntc_Connect(&intc_obj,DMA_TX_INT_ID,(XInterruptHandler)dma_tx_handler,NULL);
+			XIntc_Enable(&intc_obj,DMA_TX_INT_ID);
+			XAxiDma_IntrDisable(&dma_obj,XAXIDMA_IRQ_ALL_MASK,XAXIDMA_DMA_TO_DEVICE);
+		}
+
+		// Enable all the interrupts.
+		{
+			// Start the interrupt controller.
+			Status = XIntc_Start(&intc_obj,XIN_REAL_MODE);
+			Xil_AssertNonvoid(Status==XST_SUCCESS);
+
+			// Initialize microblaze's exceptions and associate interrupt
+			// controller's handler with the microblaze's single interrupt.
+			Xil_ExceptionInit();
+			Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,
+						(Xil_ExceptionHandler)XIntc_InterruptHandler,
+						&intc_obj);
+
+			// Enable the microblaze's interrupts.
+			Xil_ExceptionEnable();
+
+			// Enable the interrupts of each device. The timer is enabled last to ensure
+			// all other devices are fully configured before the system starts acquiting
+			// samples from the spi device.
+			XAxiDma_IntrEnable(&dma_obj,XAXIDMA_IRQ_ALL_MASK,XAXIDMA_DMA_TO_DEVICE);
+			Status = XSpi_Start(&spi_obj);
+			Xil_AssertNonvoid(Status==XST_SUCCESS);
+			XTmrCtr_Start(&timer_obj,0);
+		}
+	}
+
+	// Application must not end.
+	while (1) continue;
+
+	return 0;
+}
+
+void dma_tx_handler(void* ptr) {
+
+	(void) ptr;
+
+	u32 IrqStatus;
+
+	// Retrieve and acknowledge interrupt.
+	IrqStatus = XAxiDma_IntrGetIrq(&dma_obj, XAXIDMA_DMA_TO_DEVICE);
+	XAxiDma_IntrAckIrq(&dma_obj, IrqStatus, XAXIDMA_DMA_TO_DEVICE);
+
+	if (!(IrqStatus & XAXIDMA_IRQ_ALL_MASK)) {
+		return;
+	}
+
+	// Check if there is an error.
+	Xil_AssertVoid(!(IrqStatus & XAXIDMA_IRQ_ERROR_MASK));
+
+	// This mask signifies the transaction is complete.
+	if ((IrqStatus & XAXIDMA_IRQ_IOC_MASK)) {
+
+		// The application should reach this point, signaling the sample
+		// has successfully reached the FIR filter.
+		__asm__("nop");
+	}
+}
+
+void timer_handler(void *CallBackRef, u8 TmrCtrNumber) {
+
+	int Status;
+
+	// Once this isr is triggered, the transfer over the spi device is started.
+	Status = XSpi_SetSlaveSelect(&spi_obj,1);
+	Xil_AssertVoid(Status==XST_SUCCESS);
+	Status = XSpi_Transfer(&spi_obj,(u8*)&input_sample,(u8*)&input_sample,sizeof(u16));
+	Xil_AssertVoid(Status==XST_SUCCESS);
+}
+
+void spi_handler(void *CallBackRef, u32 StatusEvent, unsigned int ByteCount) {
+
+	int Status;
+
+	// Make sure there are no errors and remove slave select.
+	Xil_AssertVoid(StatusEvent==XST_SPI_TRANSFER_DONE);
+	Status = XSpi_SetSlaveSelect(&spi_obj,0);
+	Xil_AssertVoid(Status==XST_SUCCESS);
+
+	// Store intput sample into block ram.
+	current_buffer->samples[sample_total++] = input_sample;
+
+	// Once the buffer is filled, perform the following operations.
+	if (sample_total==SAMPLE_BUFFER_SIZE) {
+
+		Status = XAxiDma_SimpleTransfer(&dma_obj,(UINTPTR)current_buffer,sizeof(sample_buffer_type),XAXIDMA_DMA_TO_DEVICE);
+		Xil_AssertVoid(Status==XST_SUCCESS);
+
+		sample_total = 0;
+		current_buffer = (sample_buffer_type*)((current_buffer==(sample_buffer_type*)SAMPLE_BUFFER_0_BASE_ADDR)?
+				SAMPLE_BUFFER_1_BASE_ADDR:SAMPLE_BUFFER_0_BASE_ADDR);
+	}
+
+	// Send the sample to the FIR filter via the dma.
+	//Status = XAxiDma_SimpleTransfer(&dma_obj,(UINTPTR)input_sample,sizeof(u16),XAXIDMA_DMA_TO_DEVICE);
+	//Xil_AssertVoid(Status==XST_SUCCESS);
+}

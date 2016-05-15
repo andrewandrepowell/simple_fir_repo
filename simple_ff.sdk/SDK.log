@@ -1,0 +1,1837 @@
+20:30:40 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.3/scripts/xsdb/xsdb/xsdb-server.tcl
+20:30:50 INFO  : XSDB server has started successfully.
+20:30:54 INFO  : Processing command line option -hwspec C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper.hdf.
+21:21:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:21:31 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+21:21:33 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+21:21:33 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:21:34 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+21:21:34 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:21:34 INFO  : System reset is completed.
+21:21:38 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:21:39 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+21:21:39 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+21:21:39 INFO  : Memory regions updated for context MicroBlaze #0
+21:21:40 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:21:40 INFO  : 'con' command is executed.
+21:21:40 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+21:22:54 INFO  : Disconnected from the channel tcfchan#1.
+21:22:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:22:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+21:22:58 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+21:22:59 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:22:59 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+21:22:59 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:23:00 INFO  : System reset is completed.
+21:23:03 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:23:04 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+21:23:04 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+21:23:04 INFO  : Memory regions updated for context MicroBlaze #0
+21:23:05 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:23:05 INFO  : 'con' command is executed.
+21:23:05 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+21:25:25 INFO  : Disconnected from the channel tcfchan#2.
+21:25:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:25:25 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+21:25:27 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+21:25:28 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:25:28 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+21:25:29 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:25:29 INFO  : System reset is completed.
+21:25:32 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:25:33 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+21:25:33 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+21:25:33 INFO  : Memory regions updated for context MicroBlaze #0
+21:25:33 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:25:33 INFO  : 'con' command is executed.
+21:25:33 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+21:25:48 INFO  : Disconnected from the channel tcfchan#3.
+21:25:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:25:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+21:25:51 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+21:25:51 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:25:52 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+21:25:52 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:25:52 INFO  : System reset is completed.
+21:25:56 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:25:56 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+21:25:56 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+21:25:56 INFO  : Memory regions updated for context MicroBlaze #0
+21:25:57 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:25:57 INFO  : 'con' command is executed.
+21:25:57 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+21:27:11 INFO  : Disconnected from the channel tcfchan#4.
+21:27:11 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:27:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+21:27:13 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+21:27:14 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:27:14 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+21:27:14 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:27:15 INFO  : System reset is completed.
+21:27:18 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:27:19 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+21:27:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+21:27:19 INFO  : Memory regions updated for context MicroBlaze #0
+21:27:19 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:27:19 INFO  : 'con' command is executed.
+21:27:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+21:29:11 INFO  : Disconnected from the channel tcfchan#5.
+21:29:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:29:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+21:29:15 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+21:29:15 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:29:15 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+21:29:16 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:29:16 INFO  : System reset is completed.
+21:29:19 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:29:20 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+21:29:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+21:29:20 INFO  : Memory regions updated for context MicroBlaze #0
+21:29:20 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:29:20 INFO  : 'con' command is executed.
+21:29:20 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+21:30:27 INFO  : Disconnected from the channel tcfchan#6.
+21:30:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:30:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+21:30:29 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+21:30:30 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:30:30 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+21:30:31 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:30:31 INFO  : System reset is completed.
+21:30:34 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:30:35 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+21:30:35 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+21:30:35 INFO  : Memory regions updated for context MicroBlaze #0
+21:30:35 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:30:35 INFO  : 'con' command is executed.
+21:30:35 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+21:32:08 INFO  : Disconnected from the channel tcfchan#7.
+21:32:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:32:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+21:32:11 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+21:32:11 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:32:11 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+21:32:12 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:32:12 INFO  : System reset is completed.
+21:32:16 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:32:16 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+21:32:16 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+21:32:16 INFO  : Memory regions updated for context MicroBlaze #0
+21:32:17 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:32:17 INFO  : 'con' command is executed.
+21:32:17 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+21:34:31 INFO  : Disconnected from the channel tcfchan#8.
+21:34:31 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:34:32 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+21:34:34 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+21:34:35 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:34:35 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+21:34:35 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:34:35 INFO  : System reset is completed.
+21:34:39 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:34:39 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+21:34:39 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+21:34:39 INFO  : Memory regions updated for context MicroBlaze #0
+21:34:40 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:34:40 INFO  : 'con' command is executed.
+21:34:40 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+21:34:59 INFO  : Disconnected from the channel tcfchan#9.
+21:34:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:34:59 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+21:35:02 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+21:35:02 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:35:02 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+21:35:03 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:35:03 INFO  : System reset is completed.
+21:35:06 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:35:07 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+21:35:07 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+21:35:07 INFO  : Memory regions updated for context MicroBlaze #0
+21:35:07 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:35:07 INFO  : 'con' command is executed.
+21:35:07 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+21:43:50 INFO  : Disconnected from the channel tcfchan#10.
+21:43:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:43:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+21:43:53 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+21:43:53 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:43:53 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+21:43:54 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:43:54 INFO  : System reset is completed.
+21:43:58 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:43:59 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+21:43:59 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+21:43:59 INFO  : Memory regions updated for context MicroBlaze #0
+21:43:59 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:43:59 INFO  : 'con' command is executed.
+21:43:59 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+21:47:57 INFO  : Disconnected from the channel tcfchan#11.
+21:47:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:47:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+21:48:00 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+21:48:00 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:48:00 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+21:48:01 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:48:01 INFO  : System reset is completed.
+21:48:05 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:48:05 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+21:48:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+21:48:05 INFO  : Memory regions updated for context MicroBlaze #0
+21:48:05 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:48:06 INFO  : 'con' command is executed.
+21:48:06 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+21:48:33 INFO  : Disconnected from the channel tcfchan#12.
+21:48:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:48:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+21:48:36 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+21:48:36 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:48:36 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+21:48:37 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:48:37 INFO  : System reset is completed.
+21:48:40 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:48:41 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+21:48:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+21:48:41 INFO  : Memory regions updated for context MicroBlaze #0
+21:48:41 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:48:41 INFO  : 'con' command is executed.
+21:48:41 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+21:49:14 INFO  : Disconnected from the channel tcfchan#13.
+21:49:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:49:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+21:49:17 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+21:49:18 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:49:18 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+21:49:18 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:49:18 INFO  : System reset is completed.
+21:49:22 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:49:22 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+21:49:22 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+21:49:22 INFO  : Memory regions updated for context MicroBlaze #0
+21:49:23 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:49:23 INFO  : 'con' command is executed.
+21:49:23 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+21:50:08 INFO  : Disconnected from the channel tcfchan#14.
+21:50:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:50:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+21:50:11 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+21:50:11 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:50:12 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+21:50:12 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:50:12 INFO  : System reset is completed.
+21:50:16 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:50:16 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+21:50:16 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+21:50:16 INFO  : Memory regions updated for context MicroBlaze #0
+21:50:16 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:50:17 INFO  : 'con' command is executed.
+21:50:17 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+21:51:15 INFO  : Disconnected from the channel tcfchan#15.
+21:51:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:51:16 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+21:51:18 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+21:51:19 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:51:19 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+21:51:19 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:51:20 INFO  : System reset is completed.
+21:51:23 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:51:24 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+21:51:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+21:51:24 INFO  : Memory regions updated for context MicroBlaze #0
+21:51:24 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:51:24 INFO  : 'con' command is executed.
+21:51:24 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+21:52:12 INFO  : Disconnected from the channel tcfchan#16.
+21:52:12 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:52:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+21:52:15 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+21:52:15 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:52:15 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+21:52:16 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:52:16 INFO  : System reset is completed.
+21:52:19 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:52:20 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+21:52:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+21:52:20 INFO  : Memory regions updated for context MicroBlaze #0
+21:52:20 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:52:20 INFO  : 'con' command is executed.
+21:52:20 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+21:57:43 INFO  : Disconnected from the channel tcfchan#17.
+21:57:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:57:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+21:57:46 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+21:57:47 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:57:47 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+21:57:48 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:57:48 INFO  : System reset is completed.
+21:57:51 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:57:52 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+21:57:52 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+21:57:52 INFO  : Memory regions updated for context MicroBlaze #0
+21:57:52 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:57:52 INFO  : 'con' command is executed.
+21:57:52 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+20:54:38 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.3/scripts/xsdb/xsdb/xsdb-server.tcl
+20:54:48 INFO  : XSDB server has started successfully.
+20:54:50 INFO  : Processing command line option -hwspec C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper.hdf.
+20:54:50 INFO  : Checking for hwspec changes in the project block_design_wrapper_hw_platform_0.
+20:54:51 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1463116759031,  Project:1463098643252
+20:54:51 INFO  : The hardware specification for project 'block_design_wrapper_hw_platform_0' is different from C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper.hdf.
+20:54:51 INFO  : Copied contents of C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper.hdf into \block_design_wrapper_hw_platform_0\system.hdf.
+20:54:52 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+20:55:17 INFO  : 
+20:55:19 INFO  : Updating hardware inferred compiler options for app.
+20:55:19 INFO  : Clearing existing target manager status.
+20:55:21 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+20:55:25 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+20:58:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:58:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+20:58:20 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+20:58:21 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+20:58:21 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+20:58:22 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+20:58:22 INFO  : System reset is completed.
+20:58:26 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+20:58:26 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+20:58:26 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+20:58:26 INFO  : Memory regions updated for context MicroBlaze #0
+20:58:27 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+20:58:27 INFO  : 'con' command is executed.
+20:58:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+20:59:33 INFO  : Disconnected from the channel tcfchan#1.
+20:59:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+20:59:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+20:59:36 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+20:59:37 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+20:59:37 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+20:59:37 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+20:59:37 INFO  : System reset is completed.
+20:59:41 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+20:59:41 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+20:59:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+20:59:41 INFO  : Memory regions updated for context MicroBlaze #0
+20:59:41 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+20:59:41 INFO  : 'con' command is executed.
+20:59:41 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+21:13:42 INFO  : Disconnected from the channel tcfchan#2.
+21:13:42 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:13:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+21:13:45 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+21:13:45 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:13:45 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+21:13:45 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:13:46 INFO  : System reset is completed.
+21:13:49 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:13:50 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+21:13:50 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+21:13:50 INFO  : Memory regions updated for context MicroBlaze #0
+21:13:50 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:13:50 INFO  : 'con' command is executed.
+21:13:50 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+21:14:34 INFO  : Disconnected from the channel tcfchan#3.
+21:14:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:14:35 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+21:14:37 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+21:14:37 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:14:38 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+21:14:38 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:14:38 INFO  : System reset is completed.
+21:14:41 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:14:42 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+21:14:42 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+21:14:42 INFO  : Memory regions updated for context MicroBlaze #0
+21:14:42 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:14:42 INFO  : 'con' command is executed.
+21:14:42 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+21:15:00 INFO  : Disconnected from the channel tcfchan#4.
+21:15:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:15:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+21:15:03 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+21:15:03 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:15:03 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+21:15:04 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:15:04 INFO  : System reset is completed.
+21:15:07 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:15:08 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+21:15:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+21:15:08 INFO  : Memory regions updated for context MicroBlaze #0
+21:15:08 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:15:08 INFO  : 'con' command is executed.
+21:15:08 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+21:15:58 INFO  : Disconnected from the channel tcfchan#5.
+21:15:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:15:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+21:16:00 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+21:16:01 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:16:01 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+21:16:01 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:16:01 INFO  : System reset is completed.
+21:16:05 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:16:05 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+21:16:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+21:16:05 INFO  : Memory regions updated for context MicroBlaze #0
+21:16:05 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:16:05 INFO  : 'con' command is executed.
+21:16:05 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+21:16:19 INFO  : Disconnected from the channel tcfchan#6.
+21:16:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:16:20 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+21:16:22 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+21:16:22 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:16:23 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+21:16:23 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:16:23 INFO  : System reset is completed.
+21:16:26 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:16:27 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+21:16:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+21:16:27 INFO  : Memory regions updated for context MicroBlaze #0
+21:16:27 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:16:27 INFO  : 'con' command is executed.
+21:16:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+21:16:57 INFO  : Disconnected from the channel tcfchan#7.
+21:16:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:16:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+21:17:00 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+21:17:00 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:17:01 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+21:17:01 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:17:01 INFO  : System reset is completed.
+21:17:04 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:17:05 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+21:17:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+21:17:05 INFO  : Memory regions updated for context MicroBlaze #0
+21:17:05 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:17:05 INFO  : 'con' command is executed.
+21:17:05 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+21:20:36 INFO  : Disconnected from the channel tcfchan#8.
+21:20:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:20:37 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+21:20:39 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+21:20:40 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:20:40 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+21:20:40 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:20:40 INFO  : System reset is completed.
+21:20:44 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:20:44 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+21:20:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+21:20:44 INFO  : Memory regions updated for context MicroBlaze #0
+21:20:44 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:20:44 INFO  : 'con' command is executed.
+21:20:44 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+21:21:59 INFO  : Disconnected from the channel tcfchan#9.
+21:21:59 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:22:00 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+21:22:02 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+21:22:02 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:22:03 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+21:22:03 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:22:03 INFO  : System reset is completed.
+21:22:06 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:22:07 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+21:22:07 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+21:22:07 INFO  : Memory regions updated for context MicroBlaze #0
+21:22:07 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:22:07 INFO  : 'con' command is executed.
+21:22:07 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+21:24:47 INFO  : Disconnected from the channel tcfchan#10.
+21:24:47 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:24:47 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+21:24:49 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+21:24:50 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:24:50 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+21:24:50 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:24:50 INFO  : System reset is completed.
+21:24:54 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:24:54 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+21:24:54 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+21:24:54 INFO  : Memory regions updated for context MicroBlaze #0
+21:24:55 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:24:55 INFO  : 'con' command is executed.
+21:24:55 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+21:25:30 INFO  : Disconnected from the channel tcfchan#11.
+21:25:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:25:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+21:25:32 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+21:25:33 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:25:33 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+21:25:33 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:25:33 INFO  : System reset is completed.
+21:25:37 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:25:37 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+21:25:37 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+21:25:37 INFO  : Memory regions updated for context MicroBlaze #0
+21:25:38 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:25:38 INFO  : 'con' command is executed.
+21:25:38 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+21:26:03 INFO  : Disconnected from the channel tcfchan#12.
+21:26:03 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:26:03 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+21:26:06 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+21:26:06 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:26:06 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+21:26:06 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:26:07 INFO  : System reset is completed.
+21:26:10 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:26:10 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+21:26:10 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+21:26:10 INFO  : Memory regions updated for context MicroBlaze #0
+21:26:10 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:26:11 INFO  : 'con' command is executed.
+21:26:11 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+21:26:41 INFO  : Disconnected from the channel tcfchan#13.
+21:26:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:26:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+21:26:44 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+21:26:44 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:26:45 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+21:26:45 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:26:45 INFO  : System reset is completed.
+21:26:48 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:26:49 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+21:26:49 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+21:26:49 INFO  : Memory regions updated for context MicroBlaze #0
+21:26:49 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:26:49 INFO  : 'con' command is executed.
+21:26:49 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+21:27:50 INFO  : Disconnected from the channel tcfchan#14.
+21:27:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:27:51 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+21:27:53 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+21:27:54 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:27:54 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+21:27:54 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:27:54 INFO  : System reset is completed.
+21:27:58 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:27:58 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+21:27:58 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+21:27:58 INFO  : Memory regions updated for context MicroBlaze #0
+21:27:58 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:27:58 INFO  : 'con' command is executed.
+21:27:58 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+21:28:22 INFO  : Disconnected from the channel tcfchan#15.
+21:28:22 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:28:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+21:28:24 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+21:28:25 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:28:25 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+21:28:25 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:28:25 INFO  : System reset is completed.
+21:28:29 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:28:29 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+21:28:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+21:28:29 INFO  : Memory regions updated for context MicroBlaze #0
+21:28:29 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:28:30 INFO  : 'con' command is executed.
+21:28:30 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+21:34:43 INFO  : Disconnected from the channel tcfchan#16.
+21:34:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:34:43 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+21:34:46 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+21:34:46 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:34:46 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+21:34:47 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:34:47 INFO  : System reset is completed.
+21:34:50 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:34:51 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+21:34:51 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+21:34:51 INFO  : Memory regions updated for context MicroBlaze #0
+21:34:51 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:34:51 INFO  : 'con' command is executed.
+21:34:51 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+21:35:25 INFO  : Disconnected from the channel tcfchan#17.
+21:35:25 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:35:25 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+21:35:28 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+21:35:28 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:35:28 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+21:35:28 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:35:29 INFO  : System reset is completed.
+21:35:32 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:35:33 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+21:35:33 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+21:35:33 INFO  : Memory regions updated for context MicroBlaze #0
+21:35:33 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:35:33 INFO  : 'con' command is executed.
+21:35:33 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+21:35:57 INFO  : Disconnected from the channel tcfchan#18.
+21:35:57 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+21:35:57 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+21:36:00 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+21:36:00 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:36:00 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+21:36:00 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:36:01 INFO  : System reset is completed.
+21:36:04 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:36:04 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+21:36:04 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+21:36:04 INFO  : Memory regions updated for context MicroBlaze #0
+21:36:05 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+21:36:05 INFO  : 'con' command is executed.
+21:36:05 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+21:59:15 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1463191090920,  Project:1463116759031
+21:59:15 INFO  : Project block_design_wrapper_hw_platform_0's source hardware specification located at C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+21:59:17 INFO  : Copied contents of C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper.hdf into \block_design_wrapper_hw_platform_0\system.hdf.
+21:59:18 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+21:59:32 INFO  : 
+21:59:34 INFO  : Updating hardware inferred compiler options for app.
+21:59:34 INFO  : Clearing existing target manager status.
+21:59:34 INFO  : Closing and re-opening the MSS file of ther project app_bsp
+21:59:34 INFO  : Closing and re-opening the MSS file of ther project app_bsp
+21:59:34 INFO  : Closing and re-opening the MSS file of ther project app_bsp
+21:59:34 INFO  : Closing and re-opening the MSS file of ther project app_bsp
+21:59:35 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+21:59:37 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+22:01:33 INFO  : Disconnected from the channel tcfchan#19.
+22:01:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:01:35 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+22:01:37 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+22:01:37 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+22:01:37 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+22:01:38 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+22:01:38 INFO  : System reset is completed.
+22:01:41 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+22:01:42 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+22:01:42 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+22:01:42 INFO  : Memory regions updated for context MicroBlaze #0
+22:01:42 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+22:01:42 INFO  : 'con' command is executed.
+22:01:42 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+22:02:11 INFO  : Disconnected from the channel tcfchan#20.
+22:02:11 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:02:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+22:02:14 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+22:02:15 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+22:02:15 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+22:02:15 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+22:02:16 INFO  : System reset is completed.
+22:02:19 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+22:02:19 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+22:02:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+22:02:19 INFO  : Memory regions updated for context MicroBlaze #0
+22:02:19 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+22:02:20 INFO  : 'con' command is executed.
+22:02:20 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+22:02:46 INFO  : Disconnected from the channel tcfchan#21.
+22:02:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:02:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+22:02:48 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+22:02:49 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+22:02:49 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+22:02:49 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+22:02:50 INFO  : System reset is completed.
+22:02:53 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+22:02:53 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+22:02:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+22:02:53 INFO  : Memory regions updated for context MicroBlaze #0
+22:02:54 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+22:02:54 INFO  : 'con' command is executed.
+22:02:54 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+22:04:23 INFO  : Disconnected from the channel tcfchan#22.
+22:04:23 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:04:23 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+22:04:25 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+22:04:26 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+22:04:26 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+22:04:26 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+22:04:26 INFO  : System reset is completed.
+22:04:30 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+22:04:30 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+22:04:30 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+22:04:30 INFO  : Memory regions updated for context MicroBlaze #0
+22:04:30 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+22:04:30 INFO  : 'con' command is executed.
+22:04:30 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+22:04:46 INFO  : Disconnected from the channel tcfchan#23.
+22:04:46 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:04:46 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+22:04:49 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+22:04:49 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+22:04:49 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+22:04:49 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+22:04:50 INFO  : System reset is completed.
+22:04:53 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+22:04:53 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+22:04:53 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+22:04:53 INFO  : Memory regions updated for context MicroBlaze #0
+22:04:54 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+22:04:54 INFO  : 'con' command is executed.
+22:04:54 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+22:05:39 INFO  : Disconnected from the channel tcfchan#24.
+22:05:39 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:05:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+22:05:42 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+22:05:42 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+22:05:42 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+22:05:43 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+22:05:43 INFO  : System reset is completed.
+22:05:46 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+22:05:47 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+22:05:47 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+22:05:47 INFO  : Memory regions updated for context MicroBlaze #0
+22:05:47 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+22:05:47 INFO  : 'con' command is executed.
+22:05:47 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+22:06:11 INFO  : Disconnected from the channel tcfchan#25.
+22:06:11 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:06:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+22:06:14 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+22:06:14 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+22:06:14 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+22:06:15 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+22:06:15 INFO  : System reset is completed.
+22:06:18 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+22:06:19 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+22:06:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+22:06:19 INFO  : Memory regions updated for context MicroBlaze #0
+22:06:19 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+22:06:19 INFO  : 'con' command is executed.
+22:06:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+22:08:38 INFO  : Disconnected from the channel tcfchan#26.
+22:08:38 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+22:08:38 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+22:08:40 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+22:08:41 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+22:08:41 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+22:08:41 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+22:08:41 INFO  : System reset is completed.
+22:08:45 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+22:08:45 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+22:08:45 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+22:08:45 INFO  : Memory regions updated for context MicroBlaze #0
+22:08:45 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+22:08:46 INFO  : 'con' command is executed.
+22:08:46 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+22:41:47 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1463192785079,  Project:1463191090920
+22:41:47 INFO  : Project block_design_wrapper_hw_platform_0's source hardware specification located at C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+22:41:51 INFO  : Copied contents of C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper.hdf into \block_design_wrapper_hw_platform_0\system.hdf.
+22:41:52 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+22:42:06 INFO  : 
+22:42:09 INFO  : Updating hardware inferred compiler options for app.
+22:42:09 INFO  : Clearing existing target manager status.
+22:42:09 INFO  : Closing and re-opening the MSS file of ther project app_bsp
+22:42:09 INFO  : Closing and re-opening the MSS file of ther project app_bsp
+22:42:10 INFO  : Closing and re-opening the MSS file of ther project app_bsp
+22:42:10 INFO  : Closing and re-opening the MSS file of ther project app_bsp
+22:42:10 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+22:42:13 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+23:28:52 INFO  : Disconnected from the channel tcfchan#27.
+23:28:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+23:28:59 ERROR : Exception occured while running Program FPGA.
+java.lang.RuntimeException: Could not find FPGA device on the board for connection 'Local'.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+1. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+1. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+23:28:59 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+23:39:24 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 
+09:01:18 INFO  : Launching XSDB server: xsdb.bat C:/Xilinx/SDK/2015.3/scripts/xsdb/xsdb/xsdb-server.tcl
+09:01:25 INFO  : XSDB server has started successfully.
+09:01:27 INFO  : Processing command line option -hwspec C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper.hdf.
+09:01:27 INFO  : Checking for hwspec changes in the project block_design_wrapper_hw_platform_0.
+09:02:01 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:02:03 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+09:02:05 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+09:02:06 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+09:02:06 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+09:02:06 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+09:02:07 INFO  : System reset is completed.
+09:02:11 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+09:02:11 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+09:02:11 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+09:02:12 INFO  : Memory regions updated for context MicroBlaze #0
+09:02:12 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+09:02:12 INFO  : 'con' command is executed.
+09:02:12 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+09:03:09 INFO  : Disconnected from the channel tcfchan#1.
+09:03:09 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:03:09 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+09:03:12 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+09:03:12 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+09:03:12 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+09:03:12 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+09:03:13 INFO  : System reset is completed.
+09:03:16 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+09:03:16 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+09:03:16 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+09:03:16 INFO  : Memory regions updated for context MicroBlaze #0
+09:03:17 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+09:03:17 INFO  : 'con' command is executed.
+09:03:17 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+09:13:34 INFO  : Disconnected from the channel tcfchan#2.
+09:42:04 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1463233265654,  Project:1463192785079
+09:42:04 INFO  : Project block_design_wrapper_hw_platform_0's source hardware specification located at C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+09:42:05 INFO  : Copied contents of C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper.hdf into \block_design_wrapper_hw_platform_0\system.hdf.
+09:42:07 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+09:42:34 INFO  : 
+09:42:35 INFO  : Updating hardware inferred compiler options for app.
+09:42:35 INFO  : Clearing existing target manager status.
+09:43:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:43:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+09:43:30 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+09:43:30 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+09:43:30 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+09:43:30 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+09:43:31 INFO  : System reset is completed.
+09:43:34 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+09:43:34 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+09:43:34 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+09:43:34 INFO  : Memory regions updated for context MicroBlaze #0
+09:43:35 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+09:43:35 INFO  : 'con' command is executed.
+09:43:35 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+09:55:11 INFO  : Disconnected from the channel tcfchan#3.
+09:55:11 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:55:11 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+09:55:14 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+09:55:14 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+09:55:14 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+09:55:15 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+09:55:15 INFO  : System reset is completed.
+09:55:19 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+09:55:19 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+09:55:19 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+09:55:19 INFO  : Memory regions updated for context MicroBlaze #0
+09:55:19 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+09:55:19 INFO  : 'con' command is executed.
+09:55:19 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+09:58:01 INFO  : Disconnected from the channel tcfchan#4.
+09:58:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:58:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+09:58:04 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+09:58:05 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+09:58:05 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+09:58:05 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+09:58:05 INFO  : System reset is completed.
+09:58:09 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+09:58:09 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+09:58:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+09:58:09 INFO  : Memory regions updated for context MicroBlaze #0
+09:58:09 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+09:58:09 INFO  : 'con' command is executed.
+09:58:09 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+09:59:43 INFO  : Disconnected from the channel tcfchan#5.
+09:59:43 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:59:43 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+09:59:46 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+09:59:46 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+09:59:46 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+09:59:47 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+09:59:47 INFO  : System reset is completed.
+09:59:50 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+09:59:51 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+09:59:51 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+09:59:51 INFO  : Memory regions updated for context MicroBlaze #0
+09:59:51 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+09:59:51 INFO  : 'con' command is executed.
+09:59:51 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+10:00:16 INFO  : Disconnected from the channel tcfchan#6.
+10:00:16 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:00:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+10:00:19 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+10:00:19 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+10:00:20 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+10:00:20 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+10:00:20 INFO  : System reset is completed.
+10:00:24 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+10:00:24 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+10:00:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+10:00:24 INFO  : Memory regions updated for context MicroBlaze #0
+10:00:24 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+10:00:24 INFO  : 'con' command is executed.
+10:00:24 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+10:02:50 INFO  : Disconnected from the channel tcfchan#7.
+10:02:50 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:02:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+10:02:52 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+10:02:53 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+10:02:53 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+10:02:53 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+10:02:54 INFO  : System reset is completed.
+10:02:57 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+10:02:57 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+10:02:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+10:02:57 INFO  : Memory regions updated for context MicroBlaze #0
+10:02:58 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+10:02:58 INFO  : 'con' command is executed.
+10:02:58 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+10:05:00 INFO  : Disconnected from the channel tcfchan#8.
+10:05:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:05:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+10:05:03 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+10:05:03 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+10:05:03 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+10:05:04 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+10:05:04 INFO  : System reset is completed.
+10:05:07 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+10:05:08 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+10:05:08 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+10:05:08 INFO  : Memory regions updated for context MicroBlaze #0
+10:05:08 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+10:05:08 INFO  : 'con' command is executed.
+10:05:08 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+10:06:39 INFO  : Disconnected from the channel tcfchan#9.
+10:06:39 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:06:40 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+10:06:42 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+10:06:42 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+10:06:43 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+10:06:43 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+10:06:43 INFO  : System reset is completed.
+10:06:46 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+10:06:47 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+10:06:47 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+10:06:47 INFO  : Memory regions updated for context MicroBlaze #0
+10:06:47 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+10:06:47 INFO  : 'con' command is executed.
+10:06:47 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+10:07:33 INFO  : Disconnected from the channel tcfchan#10.
+10:07:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:07:34 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+10:07:36 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+10:07:37 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+10:07:37 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+10:07:37 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+10:07:38 INFO  : System reset is completed.
+10:07:41 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+10:07:41 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+10:07:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+10:07:42 INFO  : Memory regions updated for context MicroBlaze #0
+10:07:42 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+10:07:42 INFO  : 'con' command is executed.
+10:07:42 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+10:08:27 INFO  : Disconnected from the channel tcfchan#11.
+10:08:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:08:28 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+10:08:30 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+10:08:30 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+10:08:31 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+10:08:31 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+10:08:31 INFO  : System reset is completed.
+10:08:35 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+10:08:35 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+10:08:35 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+10:08:35 INFO  : Memory regions updated for context MicroBlaze #0
+10:08:35 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+10:08:35 INFO  : 'con' command is executed.
+10:08:35 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+13:52:57 INFO  : SDK has detected change in the last modified timestamps for source hardware specification file Source:1463248309855,  Project:1463233265654
+13:52:57 INFO  : Project block_design_wrapper_hw_platform_0's source hardware specification located at C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper.hdf is now different from the local copy.
+		 The local copy will be replaced with the source specification and your workspace will be updated.
+13:52:59 INFO  : Copied contents of C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper.hdf into \block_design_wrapper_hw_platform_0\system.hdf.
+13:53:10 INFO  : Synchronizing projects in the workspace with the hardware platform specification changes.
+13:53:46 INFO  : 
+13:53:47 INFO  : Updating hardware inferred compiler options for app.
+13:53:47 INFO  : Clearing existing target manager status.
+13:53:47 INFO  : Closing and re-opening the MSS file of ther project app_bsp
+13:53:51 INFO  : Closing and re-opening the MSS file of ther project app_bsp
+13:53:52 INFO  : Closing and re-opening the MSS file of ther project app_bsp
+13:53:53 INFO  : Closing and re-opening the MSS file of ther project app_bsp
+13:53:53 INFO  : Workspace synchronized with the new hardware specification file. Cleaning dependent projects...
+13:54:16 WARN  : Linker script will not be updated automatically. Users need to update it manually.
+13:55:33 INFO  : Disconnected from the channel tcfchan#12.
+13:55:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:55:38 ERROR : Exception occured while running Program FPGA.
+java.lang.RuntimeException: Could not find FPGA device on the board for connection 'Local'.
+
+
+Troubleshooting hints:
+1. Check whether board is connected to system properly.
+1. In case of zynq board, check whether Digilent/Xilinx cable switch settings are correct.
+1. If you are using Xilinx Platform Cable USB, ensure that status LED is green.
+13:55:38 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+----------------End of Script----------------
+
+13:56:01 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:56:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0' command is executed.
+13:56:04 INFO  : FPGA configured successfully with bitstream "C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit"
+13:56:04 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+13:56:04 INFO  : Hardware design information is loaded from 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf'.
+13:56:05 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+13:56:05 INFO  : System reset is completed.
+13:56:09 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+13:56:09 INFO  : The application 'C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf' is downloaded to processor 'hier_mb_ps_microblaze_0'.
+13:56:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -filter {jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A" && level==0} -index 0
+fpga -file C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/block_design_wrapper.bit
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+loadhw C:/Xilinx/Projects/simple_ff/simple_ff.sdk/block_design_wrapper_hw_platform_0/system.hdf
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+rst -system
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+dow C:/Xilinx/Projects/simple_ff/simple_ff.sdk/app/Debug/app.elf
+----------------End of Script----------------
+
+13:56:09 INFO  : Memory regions updated for context MicroBlaze #0
+13:56:09 INFO  : Context for processor 'hier_mb_ps_microblaze_0' is selected.
+13:56:09 INFO  : 'con' command is executed.
+13:56:09 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "microblaze*#0" && bscan=="USER2"  && jtag_cable_name =~ "Digilent Nexys4DDR 210292745510A"} -index 0
+con
+----------------End of Script----------------
+
+14:46:15 INFO  : Disconnected from the channel tcfchan#13.
+14:46:43 ERROR : Unexpected error while parsing XMD response ?: com.google.gson.JsonSyntaxException: com.google.gson.stream.MalformedJsonException: invalid number or unquoted string near 

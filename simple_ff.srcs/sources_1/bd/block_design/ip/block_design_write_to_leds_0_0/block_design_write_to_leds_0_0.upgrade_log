@@ -1,0 +1,58 @@
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.3 (win64) Build 1368829 Mon Sep 28 20:06:43 MDT 2015
+| Date         : Sat May 14 14:05:03 2016
+| Host         : idea-PC running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'block_design_write_to_leds_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of block_design_write_to_leds_0_0 (xilinx.com:user:write_to_leds:1.0) from (Rev. 4) to (Rev. 5)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.3 (win64) Build 1368829 Mon Sep 28 20:06:43 MDT 2015
+| Date         : Sat May 14 13:25:52 2016
+| Host         : idea-PC running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'block_design_write_to_leds_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of block_design_write_to_leds_0_0 (xilinx.com:user:write_to_leds:1.0) from (Rev. 3) to (Rev. 4)
+
+
+
+
+
+
+Copyright 1986-2015 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2015.3 (win64) Build 1368829 Mon Sep 28 20:06:43 MDT 2015
+| Date         : Sat May 14 09:09:39 2016
+| Host         : idea-PC running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7a100tcsg324-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'block_design_write_to_leds_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of block_design_write_to_leds_0_0 (xilinx.com:user:write_to_leds:1.0) from (Rev. 2) to (Rev. 3)
+
